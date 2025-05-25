@@ -6,7 +6,7 @@ on:
 
 jobs:
   read-file:
-    runs-on: ubuntu-latest
+    runs-on: Standard GitHub-hosted runners
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
