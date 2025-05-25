@@ -1,0 +1,18 @@
+name: Read hello.txt
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  read-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Display hello.txt content
+        run: |
+          echo "=== START OF hello.txt ==="
+          cat hello.txt || echo "Error: hello.txt not found"
+          echo "=== END OF hello.txt ==="
